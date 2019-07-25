@@ -8,7 +8,8 @@ export async function queryCurrent() {
   //return request('/api/currentUser');
   return {
     name: '已登录用户',
-    avatar: 'https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png',
+    //avatar: 'https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png',
+    avatar: 'https://skyorange.com/icon/user.svg',
     userid: '00000001',
     email: '......',
     signature: '......',
