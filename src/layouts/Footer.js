@@ -8,8 +8,8 @@ const FooterView = () => (
     <GlobalFooter
       links={[
         {
-          key: 'Sky Orange 首页',
-          title: 'Sky Orange 首页',
+          key: 'SkyOrange 首页',
+          title: 'SkyOrange 首页',
           href: 'https://skyorange.com/',
           blankTarget: true,
         },

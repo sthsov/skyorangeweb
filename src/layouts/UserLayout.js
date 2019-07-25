@@ -7,7 +7,7 @@ import GlobalFooter from '@/components/GlobalFooter';
 import DocumentTitle from 'react-document-title';
 import SelectLang from '@/components/SelectLang';
 import styles from './UserLayout.less';
-import logo from '../assets/logo.svg';
+import logo from '../assets/console_logo.svg';
 import getPageTitle from '@/utils/getPageTitle';
 
 const links = [
@@ -63,10 +63,10 @@ class UserLayout extends Component {
               <div className={styles.header}>
                 <Link to="/">
                   <img alt="logo" className={styles.logo} src={logo} />
-                  <span className={styles.title}>Sky Orange</span>
+                  <span className={styles.title}>SkyOrange</span>
                 </Link>
               </div>
-              <div className={styles.desc}>sky orange 网上投资管理平台</div>
+              <div className={styles.desc}>SkyOrange Unite LTD</div>
             </div>
             {children}
           </div>
