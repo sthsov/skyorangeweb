@@ -60,7 +60,7 @@ class LoginPage extends Component {
             this.loginForm = form;
           }}
         >
-          <Tab key="account" tab="账户登录">
+          {/* <Tab key="account" tab="账户登录"> */}
             {login.status === 'error' &&
                 login.type === 'account' &&
                 !submitting &&
@@ -89,8 +89,8 @@ class LoginPage extends Component {
                 this.loginForm.validateFields(this.handleSubmit);
               }}
             />
-          </Tab>
-          <Tab key="mobile" tab='手机登录'>
+          {/* </Tab> */}
+          {/* <Tab key="mobile" tab='手机登录'>
             <Mobile
               name="mobile"
               placeholder="输入手机号码"
@@ -119,23 +119,23 @@ class LoginPage extends Component {
                 },
               ]}
             />
-          </Tab>
-          <div>
+          </Tab> */}
+          {/* <div>
             <Checkbox checked={autoLogin} onChange={this.changeAutoLogin}>
               <span>自动登录</span>
             </Checkbox>
             <a style={{ float: 'right' }} href="">
               <span>忘记密码</span>
             </a>
-          </div>
+          </div> */}
           <Submit loading={submitting}>
-            <span>提交</span>
+            <span>点击登录</span>
           </Submit>
-          <div className={styles.other}>
+          {/* <div className={styles.other}>
             <Link className={styles.register} to="/user/register">
               <span>注册</span>
             </Link>
-          </div>
+          </div> */}
         </Login>
       </div>
     )

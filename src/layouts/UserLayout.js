@@ -11,21 +11,21 @@ import logo from '../assets/console_logo.svg';
 import getPageTitle from '@/utils/getPageTitle';
 
 const links = [
-  {
-    key: 'help',
-    title: formatMessage({ id: 'layout.user.link.help' }),
-    href: '',
-  },
-  {
-    key: 'privacy',
-    title: formatMessage({ id: 'layout.user.link.privacy' }),
-    href: '',
-  },
-  {
-    key: 'terms',
-    title: formatMessage({ id: 'layout.user.link.terms' }),
-    href: '',
-  },
+  // {
+  //   key: 'help',
+  //   title: formatMessage({ id: 'layout.user.link.help' }),
+  //   href: '',
+  // },
+  // {
+  //   key: 'privacy',
+  //   title: formatMessage({ id: 'layout.user.link.privacy' }),
+  //   href: '',
+  // },
+  // {
+  //   key: 'terms',
+  //   title: formatMessage({ id: 'layout.user.link.terms' }),
+  //   href: '',
+  // },
 ];
 
 const copyright = (
@@ -61,10 +61,10 @@ class UserLayout extends Component {
           <div className={styles.content}>
             <div className={styles.top}>
               <div className={styles.header}>
-                <Link to="/">
+                <a href="https://skyorange.com">
                   <img alt="logo" className={styles.logo} src={logo} />
                   <span className={styles.title}>控制台</span>
-                </Link>
+                </a>
               </div>
               <div className={styles.desc}>SkyOrange Unite LTD</div>
             </div>

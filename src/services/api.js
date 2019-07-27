@@ -120,6 +120,7 @@ export async function fakeRegister(params) {
 }
 
 export async function accountLogin(params){  
+  //const response = await fetch('http://localhost:53527/DataService.ashx?target=login&username='+params.userName+'&password='+params.password);
   const response = await fetch('/Service/DataService.ashx?target=login&username='+params.userName+'&password='+params.password);
   const data = await response.json();   
   let res = { status: 'error', type: '', currentAuthority: 'guest' };

@@ -11,6 +11,6 @@ module.exports = {
   },
   "title": "SkyOrange",
   "pwa": true,
-  "iconfontUrl": "",
+  "iconfontUrl": "https://skyorange.com",
   "collapse": true
 };
