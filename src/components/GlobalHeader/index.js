@@ -27,13 +27,16 @@ export default class GlobalHeader extends PureComponent {
     return (
       <div className={styles.header}>
         {isMobile && (
-          <Link to="/" className={styles.logo} key="logo">
+          <Link to="../" className={styles.logo} key="logo">
             <img src={logo} alt="logo" width="32" />
           </Link>
         )}
         <span className={styles.trigger} onClick={this.toggle}>
           <Icon type={collapsed ? 'menu-unfold' : 'menu-fold'} />
         </span>
+        {!isMobile && (<span className={styles.slogan}>天行汇广  萃外凝宸</span>)}
+        {isMobile && (<span className={styles.sloganmobile}>天行汇广  萃外凝宸</span>)}
+
         <RightContent {...this.props} />
       </div>
     );

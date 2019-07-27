@@ -123,10 +123,11 @@ export async function accountLogin(params){
   //const response = await fetch('http://localhost:53527/DataService.ashx?target=login&username='+params.userName+'&password='+params.password);
   const response = await fetch('/Service/DataService.ashx?target=login&username='+params.userName+'&password='+params.password);
   const data = await response.json();   
-  let res = { status: 'error', type: '', currentAuthority: 'guest' };
+  let res = { status: 'error', type: '', currentAuthority: 'guest', username: params.userName, };
   if (data['verification'] === 'true'){
     res.status = 'ok';
     res.currentAuthority = data['authority'];
+    localStorage.setItem('username', res.username);
     return res;
   }
   return res;
@@ -151,7 +152,6 @@ export async function getClosedTrade(){
   const data = await response.json();
   return data; 
 }
-
 
 
 export async function queryNotices(params = {}) {

@@ -6,26 +6,26 @@ const { Footer } = Layout;
 const FooterView = () => (
   <Footer style={{ padding: 0 }}>
     <GlobalFooter
-      links={[
-        {
-          key: 'SkyOrange 首页',
-          title: 'SkyOrange 首页',
-          href: 'https://skyorange.com/',
-          blankTarget: true,
-        },
-        {
-          key: 'github',
-          title: <Icon type="github" />,
-          href: 'https://github.com/Reaper622',
-          blankTarget: true,
-        },
-        {
-          key: 'Ant Design',
-          title: '基于 Ant Design',
-          href: 'https://ant.design',
-          blankTarget: true,
-        },
-      ]}
+      // links={[
+      //   {
+      //     key: 'SkyOrange 首页',
+      //     title: 'SkyOrange 首页',
+      //     href: 'https://skyorange.com/',
+      //     blankTarget: true,
+      //   },
+      //   {
+      //     key: 'github',
+      //     title: <Icon type="github" />,
+      //     href: 'https://github.com/Reaper622',
+      //     blankTarget: true,
+      //   },
+      //   {
+      //     key: 'Ant Design',
+      //     title: '基于 Ant Design',
+      //     href: 'https://ant.design',
+      //     blankTarget: true,
+      //   },
+      // ]}
       copyright={
         <Fragment>
           Copyright <Icon type="copyright" /> 2019 SKYORANGE.COM

@@ -5,36 +5,43 @@ export async function query() {
 }
 
 export async function queryCurrent() {
-  //return request('/api/currentUser');
+  const username = localStorage.getItem('username'); 
+  //const response = await fetch('http://localhost:53527/DataService.ashx?target=userinfo&username=' + username);
+  const response = await fetch('/Service/DataService.ashx?target=userinfo&username=' + username);
+  const data = await response.json();
   return {
-    name: '已登录用户',
-    //avatar: 'https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png',
+    ...data,
     avatar: 'https://skyorange.com/icon/user.svg',
-    userid: '00000001',
-    email: '......',
-    signature: '......',
-    title: '......',
-    group: '......',
-    tags: [
-      {
-        key: '0',
-        label: '......',
-      },
-    ],
-    notifyCount: 12,
-    unreadCount: 11,
-    country: 'China',
-    geographic: {
-      province: {
-        label: '......',
-        key: '400000',
-      },
-      city: {
-        label: '......',
-        key: '400000',
-      },
-    },
-    address: '......',
-    phone: '023-68366666',
   };
+  // return {
+  //   name: '已登录用户',
+  //   //avatar: 'https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png',
+  //   avatar: 'https://skyorange.com/icon/user.svg',
+  //   userid: '00000001',
+  //   email: '......',
+  //   signature: '......',
+  //   title: '......',
+  //   group: '......',
+  //   tags: [
+  //     {
+  //       key: '0',
+  //       label: '......',
+  //     },
+  //   ],
+  //   notifyCount: 12,
+  //   unreadCount: 11,
+  //   country: 'China',
+  //   geographic: {
+  //     province: {
+  //       label: '......',
+  //       key: '400000',
+  //     },
+  //     city: {
+  //       label: '......',
+  //       key: '400000',
+  //     },
+  //   },
+  //   address: '......',
+  //   phone: '023-68366666',
+  // };
 }

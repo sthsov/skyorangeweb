@@ -71,6 +71,7 @@ export default class GlobalHeaderRight extends PureComponent {
       onMenuClick,
       onNoticeClear,
       theme,
+      isMobile,
     } = this.props;
     const menu = (
       <Menu className={styles.menu} selectedKeys={[]} onClick={onMenuClick}>
@@ -101,21 +102,23 @@ export default class GlobalHeaderRight extends PureComponent {
     }
     return (
       <div className={className}>
-        <HeaderSearch
-          className={`${styles.action} ${styles.search}`}
-          placeholder={formatMessage({ id: 'component.globalHeader.search' })}
-          dataSource={[
-            formatMessage({ id: 'component.globalHeader.search.example1' }),
-            formatMessage({ id: 'component.globalHeader.search.example2' }),
-            formatMessage({ id: 'component.globalHeader.search.example3' }),
-          ]}
-          onSearch={value => {
-            console.log('input', value); // eslint-disable-line
-          }}
-          onPressEnter={value => {
-            console.log('enter', value); // eslint-disable-line
-          }}
-        />
+        {!isMobile && (
+          <HeaderSearch
+            className={`${styles.action} ${styles.search}`}
+            placeholder={formatMessage({ id: 'component.globalHeader.search' })}
+            dataSource={[
+              formatMessage({ id: 'component.globalHeader.search.example1' }),
+              formatMessage({ id: 'component.globalHeader.search.example2' }),
+              formatMessage({ id: 'component.globalHeader.search.example3' }),
+            ]}
+            onSearch={value => {
+              console.log('input', value); // eslint-disable-line
+            }}
+            onPressEnter={value => {
+              console.log('enter', value); // eslint-disable-line
+            }}
+          />
+        )}
         {/* <Tooltip title={formatMessage({ id: 'component.globalHeader.help' })}>
           <a
             target="_blank"
@@ -192,13 +195,13 @@ export default class GlobalHeaderRight extends PureComponent {
                 src={currentUser.avatar}
                 alt="avatar"
               />
-              <span className={styles.name}>{currentUser.name}</span>
+              <span className={styles.name}>{currentUser.realName}</span>
             </span>
           </HeaderDropdown>
         ) : (
-          <Spin size="small" style={{ marginLeft: 8, marginRight: 8 }} />
-        )}
-        <SelectLang className={styles.action} />
+            <Spin size="small" style={{ marginLeft: 8, marginRight: 8 }} />
+          )}
+        {!isMobile && (<SelectLang className={styles.action} />)}
       </div>
     );
   }

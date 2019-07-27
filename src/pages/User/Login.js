@@ -67,7 +67,7 @@ class LoginPage extends Component {
                 this.renderMessage('无效的信息')}
             <UserName
               name="userName"
-              placeholder="investor trader shareholder admin"
+              placeholder="用户名，区分大小写"
               rules={[
                 {
                   required: true,
@@ -77,7 +77,7 @@ class LoginPage extends Component {
             />
             <Password
               name="password"
-              placeholder='密码 skyorange'
+              placeholder='密码，区分大小写'
               rules={[
                 {
                   required: true,
